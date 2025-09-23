@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Button colors */
+  --color-button-primary: #2374a1;
+  --color-button-hover: #1c5d81;
+  --color-button-disable: #7bacc7;
+
+  /* Text colors */
+  --color-text-primary: #0e3f54;
+  --color-text-secondary: #252525;
+  --color-text-white: #ffffff;
+  --color-text-tertiary: #4ebd96;
+  --color-text-tag: #2374a1;
+
+  /* Stroke colors */
+  --color-stroke-primary: #a7decb;
+  --color-stroke-secondary: #4ebd96;
+  --color-stroke-tertiary: #2374a1;
+
+  /* Icon colors */
+  --color-icon-primary: #2374a1;
+  --color-icon-secondary: linear-gradient(180deg, #2374a1 0%, #4ebd96 100%);
+
+  /* Card colors */
+  --color-card-first: #e4f6ff;
+  --color-card-second: #E9FFF7;
+
+  /* Background colors */
+  --color-background-primary: #FFFFFF;
+  --color-background-secondary: #EAF4FA;
+  --color-background-tertiary: #D3E3EC;
+  --color-background-fourth: #DCF2EA;
+
+  /* Font family */
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+/* Dark theme variables override when .dark is present on html */
+.dark {
+  --color-background-primary: #001927;
+}
+
+/* Typography System - Based on UI Style Guide */
+
+body {
+  font-family: var(--font-montserrat);
+  background-color: var(--color-background-primary);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* @media (min-width: 1440px) {
+  .container {
+    padding-inline: 120px;
+  }
+} */
+
+/* @media (min-width: 1440px) {
+  .container {
+    padding-inline: 120px;
+  }
+}
+
+@media ((min-width: 1280px) and (max-width: 1439px)) {
+  .container {
+    padding-inline: 80px;
+  }
+} */
+
+/* @media ((min-width: 1024px) and (max-width: 1280px)) {
+  .container {
+    padding-inline: 60px;
+  }
+} */
+
+/* @media (max-width: 1024px) {
+  .container {
+    padding-inline: 30px;
+  }
+} */
+
+/* @media (max-width: 768px) {
+  .container {
+    padding-inline: 20px;
+  }
+} */
