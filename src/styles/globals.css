@@ -36,36 +36,18 @@
 
   /* Font family */
   --font-montserrat: "Montserrat", sans-serif;
+
+  /* Border */
+  --color-border-primary: #2374a14d;
+
+  /* Separator */
+  --color-separator-primary: #d9d9d9;
 }
 
 /* Dark theme variables override when [data-theme="dark"] is present */
 
 [data-theme="dark"] {
-  /* Button colors */
-  --color-button-primary: #4ebd96;
-  --color-button-hover: #2374a1;
-  --color-button-disable: #5a6a75;
-
-  /* Text colors */
-  --color-text-primary: #e6f0f7;
-  --color-text-secondary: #e6e6e6;
-  --color-text-white: #ffffff;
-  --color-text-tertiary: #2374a1;
-  --color-text-tag: #4ebd96;
-
-  /* Stroke colors */
-  --color-stroke-primary: #2a4d63;
-  --color-stroke-secondary: #2374a1;
-  --color-stroke-tertiary: #4ebd96;
-
-  /* Icon colors */
-  --color-icon-primary: #4ebd96;
-  --color-icon-secondary: linear-gradient(180deg, #4ebd96 0%, #2374a1 100%);
-
-  /* Card colors */
-  --color-card-first: #00283d;
-  --color-card-second: #00334d;
-
+  --color-text-primary: #ffffff;
   /* Background colors */
   --color-background-primary: #001927;
   --color-background-secondary: #002e42;
@@ -87,4 +69,14 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.my-dashed-border {
+  border-bottom: 1px dashed var(--color-border-primary);
+  border-image: repeating-linear-gradient(
+      to right,
+      var(--color-border-primary) 0 16px,
+      transparent 10px 24px
+    )
+    1;
 }
