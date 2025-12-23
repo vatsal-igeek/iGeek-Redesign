@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Button colors */
+  --color-button-primary: #2374a1;
+  --color-button-hover: #1c5d81;
+  --color-button-disable: #7bacc7;
+
+  /* Text colors */
+  --color-text-primary: #0e3f54;
+  --color-text-secondary: #252525;
+  --color-text-white: #ffffff;
+  --color-text-tertiary: #4ebd96;
+  --color-text-tag: #2374a1;
+
+  /* Stroke colors */
+  --color-stroke-primary: #a7decb;
+  --color-stroke-secondary: #4ebd96;
+  --color-stroke-tertiary: #2374a1;
+
+  /* Icon colors */
+  --color-icon-primary: #2374a1;
+  --color-icon-secondary: linear-gradient(180deg, #2374a1 0%, #4ebd96 100%);
+
+  /* Card colors */
+  --color-card-first: #e4f6ff;
+  --color-card-second: #e9fff7;
+
+  /* Background colors */
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #eaf4fa;
+  --color-background-tertiary: #d3e3ec;
+  --color-background-fourth: #dcf2ea;
+
+  /* Font family */
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+/* Dark theme variables override when [data-theme="dark"] is present */
+
+[data-theme="dark"] {
+  /* Button colors */
+  --color-button-primary: #4ebd96;
+  --color-button-hover: #2374a1;
+  --color-button-disable: #5a6a75;
+
+  /* Text colors */
+  --color-text-primary: #e6f0f7;
+  --color-text-secondary: #e6e6e6;
+  --color-text-white: #ffffff;
+  --color-text-tertiary: #2374a1;
+  --color-text-tag: #4ebd96;
+
+  /* Stroke colors */
+  --color-stroke-primary: #2a4d63;
+  --color-stroke-secondary: #2374a1;
+  --color-stroke-tertiary: #4ebd96;
+
+  /* Icon colors */
+  --color-icon-primary: #4ebd96;
+  --color-icon-secondary: linear-gradient(180deg, #4ebd96 0%, #2374a1 100%);
+
+  /* Card colors */
+  --color-card-first: #00283d;
+  --color-card-second: #00334d;
+
+  /* Background colors */
+  --color-background-primary: #001927;
+  --color-background-secondary: #002e42;
+  --color-background-tertiary: #003c55;
+  --color-background-fourth: #00354a;
+}
+
+/* Typography System - Based on UI Style Guide */
+
+body {
+  font-family: var(--font-montserrat);
+  background-color: var(--color-background-primary);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}

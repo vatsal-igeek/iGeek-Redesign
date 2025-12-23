@@ -1,6 +1,6 @@
-import type { ReactNode, MouseEvent } from "react";
+import { type ReactNode, type MouseEvent, useState, useEffect } from "react";
 
-import { useThemeMode } from "@/hooks/useThemeMode";
+import { useTheme } from "next-themes";
 
 export interface SvgBackgroundType {
   icon: ReactNode;
@@ -8,15 +8,23 @@ export interface SvgBackgroundType {
 }
 
 const SvgBackground = ({ icon, onClick }: SvgBackgroundType) => {
-  const { isDark } = useThemeMode();
+  const { theme } = useTheme();
 
-  // Determine border color based on theme
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const isDark = theme === "dark";
   const borderColor = isDark ? "#AEE2FF" : "#FFFFFF";
   const backgroundColor = isDark ? "rgba(174, 226, 255, 0.3)" : "#F5F9FA";
 
   return (
     <div
-      className="w-[2.75rem] h-[2.75rem] rounded-full flex items-center justify-center cursor-pointer border"
+      className="w-11 h-11 rounded-full flex items-center justify-center cursor-pointer border"
       onClick={onClick}
       style={{
         backgroundColor,
