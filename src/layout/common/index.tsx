@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ReactNode } from "react";
 
@@ -10,6 +11,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className="min-h-screen flex flex-col bg-background-primary">
       <Header />
       <main className="grow">{children}</main>
+      <Footer />
     </div>
   );
 }

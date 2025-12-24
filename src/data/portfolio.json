@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Personal Website",
+      "category": "Web Development",
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "link": "https://example.com/personal-website",
+      "image": "/images/portfolio/projects/project1.png"
+    },
+    {
+      "id": 2,
+      "name": "E-commerce Platform",
+      "category": "Web Development",
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "link": "https://example.com/e-commerce-platform",
+      "image": "/images/portfolio/projects/project2.png"
+    },
+    {
+      "id": 3,
+      "name": "Mobile Fitness App",
+      "category": "Website",
+      "technologies": ["Flutter", "Dart", "Firebase"],
+      "link": "https://example.com/mobile-fitness-app",
+      "image": "/images/portfolio/projects/project3.png"
+    }
+  ]
+}

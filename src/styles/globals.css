@@ -3,10 +3,14 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-980: 980px;
+
   /* Button colors */
   --color-button-primary: #2374a1;
   --color-button-hover: #1c5d81;
   --color-button-disable: #7bacc7;
+  --color-button-active: #0e3f54;
+  --color-button-inactive: #eceff5;
 
   /* Text colors */
   --color-text-primary: #0e3f54;
@@ -71,6 +75,12 @@ body {
   margin: 0 auto;
 }
 
+/* Fade animation for project cards */
+.fade-in-element {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
 .my-dashed-border {
   border-bottom: 1px dashed var(--color-border-primary);
   border-image: repeating-linear-gradient(
@@ -80,3 +90,39 @@ body {
     )
     1;
 }
+
+.my-dashed-border-top {
+  border-top: 1px dashed var(--color-border-primary);
+  border-image: repeating-linear-gradient(
+      to right,
+      var(--color-border-primary) 0 16px,
+      transparent 10px 24px
+    )
+    1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+/* @media (max-width: 767px) {
+  .my-dashed-border-top {
+    border-top: 1px dashed var(--color-border-primary);
+    border-image: repeating-linear-gradient(
+        to right,
+        var(--color-border-primary) 0 16px,
+        transparent 10px 24px
+      )
+      1;
+  }
+} */

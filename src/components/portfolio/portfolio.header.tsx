@@ -32,7 +32,7 @@ export default function PortfolioHeader() {
         <span className="cursor-pointer">
           {isDark ? <IgeekDarkLogoSvg /> : <IgeekLightLogoSvg />}
         </span>
-        <div className="flex items-center gap-5">
+        <div className="hidden md:flex items-center gap-5">
           <Button
             variant="outline"
             size="lg"

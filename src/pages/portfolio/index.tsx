@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import PortfolioHeader from "@/components/portfolio/portfolio.header";
 import PortfolioHero from "@/components/portfolio/portfolio.hero";
 import PortfolioProjects from "@/components/portfolio/portfolio.projects";
@@ -13,6 +14,7 @@ const Portfolio = () => {
       <PortfolioHeader />
       <PortfolioHero />
       <PortfolioProjects />
+      <Footer />
     </>
   );
 };
