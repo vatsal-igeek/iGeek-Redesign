@@ -11,12 +11,12 @@ const PortfolioHero = () => {
           width={17}
           height={716}
           priority
-          className="hidden md:block"
+          className="hidden h-full md:block"
         />
         <div>
-          <div className="flex px-10 md:px-0 flex-col-reverse md:flex-row  justify-between items-center">
+          <div className="flex px-10 md:px-0 flex-col-reverse md:flex-row md:gap-10.25 xl:gap-19  justify-between items-center">
             <div>
-              <h1 className="text-[4.375rem] mt-14.5 md:mt-0 text-center md:text-left md:text-[7.5rem] font-bold text-text-primary">
+              <h1 className="text-[4.375rem] lg:text-[6.25rem] mt-14.5 md:mt-0 text-center md:text-left md:text-[5rem] font-bold text-text-primary">
                 Hello
               </h1>
               <p className="mt-3 text-center md:text-left font-medium text-sm md:text-xl leading-7 md:max-w-122 xl:max-w-[34.813rem] text-text-secondary pl-2">
@@ -26,8 +26,16 @@ const PortfolioHero = () => {
                 ideas into impactful products through smart design and strong
                 engineering.
               </p>
+              <Image
+                src={"/images/portfolio/portfolio.mobile.hero.line.png"}
+                width={500} // Provide a large enough number for image optimization breakpoints
+                height={0} // Or set to 0 to indicate dynamic height
+                alt="Hero section line"
+                priority
+                className="w-full mt-6 h-auto block md:hidden"
+              />
             </div>
-            <div className="mt-15 md:aspect-5/5">
+            <div className="mt-15  xl:aspect-5/5">
               <Image
                 src={"/images/portfolio/portfolio.hero.svg"}
                 alt="Hero section"
@@ -38,7 +46,8 @@ const PortfolioHero = () => {
               />
             </div>
           </div>
-          <div className="grid my-dashed-border-top pt-15 mb-15 md:mb-0 grid-cols-1 md:grid-cols-8 md:ml-7 items-center w-full mt-15">
+
+          <div className="flex my-dashed-border-top md:border-t-0! pt-15 mb-15 md:mb-0 flex-col md:flex-row  items-center w-full justify-between mt-15 md:mt-12.75  xl:mt-15">
             <div className="flex justify-center min-h-22 min-w-32">
               <CountUp
                 from={0}
@@ -98,6 +107,7 @@ const PortfolioHero = () => {
             <div className="flex justify-center my-7 md:my-0 items-center">
               <div className="h-px w-12 md:h-12 md:w-px bg-separator-primary" />
             </div>
+
             <div className="flex justify-center min-h-22 min-w-32 text-center">
               <CountUp
                 from={0}

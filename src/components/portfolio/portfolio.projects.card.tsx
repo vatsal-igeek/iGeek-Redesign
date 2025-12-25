@@ -58,10 +58,10 @@ const PortfolioProjectsCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       {/* Content stays square */}
       <div className="pt-6 flex items-center justify-between transition-all duration-1200 ease-in-out">
-        <h3 className="font-medium text-xl text-text-secondary mt-1 transition-all duration-1200 ease-in-out">
+        <h3 className="font-medium text-lg xl:text-xl text-text-secondary mt-1 transition-all duration-1200 ease-in-out">
           {project.name}
         </h3>
-        <p className="text-base font-medium opacity-50 text-text-secondary transition-all duration-1200 ease-in-out">
+        <p className="text-sm xl:text-base font-medium opacity-50 text-text-secondary transition-all duration-1200 ease-in-out">
           {project.category}
         </p>
       </div>
