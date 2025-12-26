@@ -52,6 +52,7 @@
 
 [data-theme="dark"] {
   --color-text-primary: #ffffff;
+  --color-text-secondary: #b7b7b7;
   /* Background colors */
   --color-background-primary: #001927;
   --color-background-secondary: #002e42;

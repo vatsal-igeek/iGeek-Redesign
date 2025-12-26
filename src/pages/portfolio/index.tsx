@@ -1,9 +1,7 @@
-import Footer from "@/components/footer";
-import PortfolioHeader from "@/components/portfolio/portfolio.header";
 import PortfolioHero from "@/components/portfolio/portfolio.hero";
 import PortfolioProjects from "@/components/portfolio/portfolio.projects";
+import PortfolioLayout from "@/layout/portfolio.layout";
 import Head from "next/head";
-import React from "react";
 
 const Portfolio = () => {
   return (
@@ -11,10 +9,10 @@ const Portfolio = () => {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <PortfolioHeader />
-      <PortfolioHero />
-      <PortfolioProjects />
-      <Footer />
+      <PortfolioLayout>
+        <PortfolioHero />
+        <PortfolioProjects />
+      </PortfolioLayout>
     </>
   );
 };

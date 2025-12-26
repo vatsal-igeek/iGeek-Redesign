@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import { cn } from "@/utils/cn";
 
 type ProjectFilterProps = {
   filters: readonly string[];
@@ -23,7 +24,10 @@ const PortfolioProjectsFilter: React.FC<ProjectFilterProps> = ({
             isActive={isActive}
             size="sm"
             onClick={() => onChange(filter)}
-            className="md:min-w-39 text-xs md:text-sm cursor-pointer"
+            className={cn(
+              "md:min-w-39 text-xs  md:text-sm cursor-pointer",
+              !isActive && "text-[#121212]!"
+            )}
           >
             {filter}
           </Button>

@@ -60,7 +60,7 @@ const PortfolioHero = () => {
                     +
                   </span>
                 }
-                titleClassName="text-center md:text-left leading-[1.875rem] md:text-sm lg:text-lg xl:text-xl font-medium"
+                titleClassName="text-center md:text-left leading-[1.875rem] text-sm lg:text-lg xl:text-xl font-medium text-text-secondary"
               />
             </div>
 
@@ -80,7 +80,7 @@ const PortfolioHero = () => {
                     +
                   </span>
                 }
-                titleClassName="text-center md:text-left leading-[1.875rem] md:text-sm lg:text-lg xl:text-xl font-medium"
+                titleClassName="text-center md:text-left leading-[1.875rem] text-sm lg:text-lg xl:text-xl font-medium text-text-secondary"
               />
             </div>
 
@@ -100,7 +100,7 @@ const PortfolioHero = () => {
                     +
                   </span>
                 }
-                titleClassName="text-center md:text-left leading-[1.875rem] md:text-sm lg:text-lg xl:text-xl font-medium"
+                titleClassName="text-center md:text-left leading-[1.875rem] text-sm lg:text-lg xl:text-xl font-medium text-text-secondary"
               />
             </div>
 
@@ -120,7 +120,7 @@ const PortfolioHero = () => {
                     +
                   </span>
                 }
-                titleClassName="text-center md:text-left leading-[1.875rem] md:text-sm lg:text-lg xl:text-xl font-medium"
+                titleClassName="text-center md:text-left leading-[1.875rem] text-sm lg:text-lg xl:text-xl font-medium text-text-secondary"
               />
             </div>
           </div>

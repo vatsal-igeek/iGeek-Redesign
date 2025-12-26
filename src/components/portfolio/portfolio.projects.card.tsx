@@ -39,7 +39,7 @@ const PortfolioProjectsCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <Link
-      href={project.link}
+      href={`/portfolio/${project.id}`}
       ref={cardRef}
       className={cn(
         "group block transition-all duration-1200 ease-in-out",
