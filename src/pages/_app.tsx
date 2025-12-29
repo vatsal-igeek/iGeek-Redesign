@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="data-theme">
+    <ThemeProvider attribute="data-theme" defaultTheme="light">
       <main className={montserrat.className}>
         <Component {...pageProps} />
       </main>

@@ -41,9 +41,9 @@ export default function PortfolioHeader() {
             Back to website
           </Button>
           <Button
-            variant="primary"
+            variant="tag"
             size="lg"
-            className="cursor-pointer font-semibold"
+            className="cursor-pointer  font-semibold"
           >
             Book a call <ArrowRight />
           </Button>

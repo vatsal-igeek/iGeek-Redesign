@@ -1,7 +1,7 @@
 import * as React from "react";
 import clsx from "clsx";
 
-type ButtonVariant = "primary" | "outline" | "toggle"; // NEW
+type ButtonVariant = "primary" | "outline" | "toggle" | "tag";
 
 type ButtonSize = "sm" | "md" | "lg";
 
@@ -38,12 +38,14 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             "bg-button-primary text-text-white hover:bg-button-hover focus:ring-(--color-button-primary)":
               variant === "primary",
 
-            "border border-(--color-stroke-tertiary) text-button-hover hover:bg-background-secondary focus:ring-(--color-stroke-tertiary)":
+            "border border-border-secondary text-text-tag hover:bg-background-secondary focus:ring-(--color-stroke-tertiary)":
               variant === "outline",
 
-            // Toggle variant (NEW)
             "text-text-primary focus:ring-(--color-button-active)":
               variant === "toggle",
+
+            "bg-button-tag text-button-text-light hover:bg-button-hover focus:ring-(--color-button-button-tag)":
+              variant === "tag",
           },
 
           // Toggle active / inactive states

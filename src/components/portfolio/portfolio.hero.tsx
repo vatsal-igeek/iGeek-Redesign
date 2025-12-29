@@ -1,5 +1,8 @@
 import Image from "next/image";
 import CountUp from "../common/countUp";
+import portfolioData from "../../data/portfolio.json";
+
+const { hero } = portfolioData;
 
 const PortfolioHero = () => {
   return (
@@ -17,14 +20,10 @@ const PortfolioHero = () => {
           <div className="flex px-10 md:px-0 flex-col-reverse md:flex-row md:gap-10.25 xl:gap-19  justify-between items-center">
             <div>
               <h1 className="text-[4.375rem] lg:text-[6.25rem] mt-14.5 md:mt-0 text-center md:text-left md:text-[5rem] font-bold text-text-primary">
-                Hello
+                {hero.title}
               </h1>
               <p className="mt-3 text-center md:text-left font-medium text-sm md:text-xl leading-7 md:max-w-122 xl:max-w-[34.813rem] text-text-secondary pl-2">
-                It's iGeek - a software development company focused on building
-                scalable, reliable, and innovative digital solutions. We work
-                with startups, growing businesses, and enterprises to transform
-                ideas into impactful products through smart design and strong
-                engineering.
+                {hero.description}
               </p>
               <Image
                 src={"/images/portfolio/portfolio.mobile.hero.line.png"}
@@ -51,13 +50,13 @@ const PortfolioHero = () => {
             <div className="flex justify-center min-h-22 min-w-32">
               <CountUp
                 from={0}
-                to={200}
+                to={hero.stats[0].value}
                 duration={1}
-                className="text-[3.75rem] md:text-[3.125rem] lg:text-[3.75rem]  xl:text-7xl text-text-tag font-bold"
-                title="Projects Completed"
+                className="text-[3.75rem] md:text-[3.125rem] lg:text-[3.75rem]  xl:text-7xl text-text-counter font-bold"
+                title={hero.stats[0].label}
                 icon={
                   <span className="text-text-tertiary font-bold text-[3.75rem] sm:text-xl md:text-[3.125rem] lg:text-[3.75rem] xl:text-[4.375rem]">
-                    +
+                    {hero.stats[0].symbol}
                   </span>
                 }
                 titleClassName="text-center md:text-left leading-[1.875rem] text-sm lg:text-lg xl:text-xl font-medium text-text-secondary"
@@ -71,13 +70,13 @@ const PortfolioHero = () => {
             <div className="flex justify-center min-h-22 min-w-32">
               <CountUp
                 from={0}
-                to={100}
+                to={hero.stats[1].value}
                 duration={1}
-                className="text-[3.75rem] md:text-[3.125rem]  lg:text-[3.75rem] xl:text-7xl text-text-tag font-bold"
-                title="Clients Served"
+                className="text-[3.75rem] md:text-[3.125rem]  lg:text-[3.75rem] xl:text-7xl text-text-counter font-bold"
+                title={hero.stats[1].label}
                 icon={
                   <span className="text-text-tertiary font-bold text-[3.75rem] sm:text-xl md:text-[3.125rem] lg:text-[3.75rem] xl:text-[4.375rem]">
-                    +
+                    {hero.stats[1].symbol}
                   </span>
                 }
                 titleClassName="text-center md:text-left leading-[1.875rem] text-sm lg:text-lg xl:text-xl font-medium text-text-secondary"
@@ -91,13 +90,13 @@ const PortfolioHero = () => {
             <div className="flex justify-center min-h-22 min-w-32">
               <CountUp
                 from={0}
-                to={50}
+                to={hero.stats[2].value}
                 duration={1}
-                className="text-[3.75rem] md:text-[3.125rem] lg:text-[3.75rem] xl:text-7xl text-text-tag font-bold"
-                title="Professionals"
+                className="text-[3.75rem] md:text-[3.125rem] lg:text-[3.75rem] xl:text-7xl text-text-counter font-bold"
+                title={hero.stats[2].label}
                 icon={
                   <span className="text-text-tertiary font-bold text-[3.75rem] sm:text-xl md:text-[3.125rem] lg:text-[3.75rem] xl:text-[4.375rem]">
-                    +
+                    {hero.stats[2].symbol}
                   </span>
                 }
                 titleClassName="text-center md:text-left leading-[1.875rem] text-sm lg:text-lg xl:text-xl font-medium text-text-secondary"
@@ -111,13 +110,13 @@ const PortfolioHero = () => {
             <div className="flex justify-center min-h-22 min-w-32 text-center">
               <CountUp
                 from={0}
-                to={7}
+                to={hero.stats[3].value}
                 duration={1}
-                className="text-[3.75rem] md:text-[3.125rem] lg:text-[3.75rem] xl:text-7xl text-center text-text-tag font-bold"
-                title="Years Of Experience"
+                className="text-[3.75rem] md:text-[3.125rem] lg:text-[3.75rem] xl:text-7xl text-center text-text-counter font-bold"
+                title={hero.stats[3].label}
                 icon={
                   <span className="text-text-tertiary font-bold text-[3.75rem] sm:text-xl md:text-[3.125rem] lg:text-[3.75rem] xl:text-[4.375rem]">
-                    +
+                    {hero.stats[3].symbol}
                   </span>
                 }
                 titleClassName="text-center md:text-left leading-[1.875rem] text-sm lg:text-lg xl:text-xl font-medium text-text-secondary"

@@ -16,12 +16,15 @@ import footerLogo from "../../public/images/footer.logo.svg";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[url('/images/footer.bg.jpg')] bg-cover bg-top bg-no-repeat sm:min-h-142.5 w-full">
+      <footer
+        className="bg-[url('/images/footer/footer.bg.jpg')]
+    [html[data-theme='dark']_&]:bg-[url('/images/footer/footer.bg.dark.jpg')] bg-cover bg-top bg-no-repeat sm:min-h-142.5 w-full my-dashed-border-top"
+      >
         {/* Padded content */}
         <div className="px-10 mb-3.5">
           <div className="mx-auto gap-7.5 py-20 grid grid-cols-4 max-w-157">
             <div>
-              <h3 className="font-semibold text-text-secondary text-[1.125rem] md:text-lg xl:text-xl mb-4">
+              <h3 className="font-semibold text-text-secondary-contrast text-[1.125rem] md:text-lg xl:text-xl mb-4">
                 Services
               </h3>
               <ul className="space-y-2">
@@ -61,7 +64,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold text-text-secondary text-[1.125rem] md:text-lg xl:text-xl mb-4">
+              <h3 className="font-semibold text-text-secondary-contrast text-[1.125rem] md:text-lg xl:text-xl mb-4">
                 Company
               </h3>
               <ul className="space-y-2">
@@ -101,13 +104,13 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold text-text-secondary text-[1.125rem] md:text-lg xl:text-xl mb-4">
+              <h3 className="font-semibold text-text-secondary-contrast text-[1.125rem] md:text-lg xl:text-xl mb-4">
                 Blog
               </h3>
             </div>
 
             <div>
-              <h3 className="font-semibold text-text-secondary text-[1.125rem] md:text-lg xl:text-xl mb-4">
+              <h3 className="font-semibold text-text-secondary-contrast text-[1.125rem] md:text-lg xl:text-xl mb-4">
                 Contacts
               </h3>
               <div className="flex gap-5">

@@ -52,7 +52,7 @@ const PortfolioProjectsCard: React.FC<ProjectCardProps> = ({ project }) => {
           src={project.image}
           alt={project.name}
           fill
-          className="object-cover transition-all duration-1200 ease-in-out"
+          className="object-cover w-full h-full transition-all duration-1200 ease-in-out"
         />
       </div>
 

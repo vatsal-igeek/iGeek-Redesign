@@ -1,36 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
 @import "tailwindcss";
 
 @theme {
-  --breakpoint-980: 980px;
-
   /* Button colors */
   --color-button-primary: #2374a1;
   --color-button-hover: #1c5d81;
-  --color-button-disable: #7bacc7;
   --color-button-active: #0e3f54;
+  --color-button-disable: #7bacc7;
   --color-button-inactive: #eceff5;
+  --color-button-secondary: #aee2ff;
+  --color-button-tag: #2374a1;
 
   /* Text colors */
   --color-text-primary: #0e3f54;
   --color-text-secondary: #252525;
-  --color-text-white: #ffffff;
   --color-text-tertiary: #4ebd96;
+  --color-text-secondary-contrast: #252525;
   --color-text-tag: #2374a1;
-
-  /* Stroke colors */
-  --color-stroke-primary: #a7decb;
-  --color-stroke-secondary: #4ebd96;
-  --color-stroke-tertiary: #2374a1;
+  --color-button-text-light: #ffffff;
+  --color-text-counter: #2374a1;
 
   /* Icon colors */
   --color-icon-primary: #2374a1;
-  --color-icon-secondary: linear-gradient(180deg, #2374a1 0%, #4ebd96 100%);
-
-  /* Card colors */
-  --color-card-first: #e4f6ff;
-  --color-card-second: #e9fff7;
+  --color-icon-secondary: #252525;
+  --color-icon-tag: #ffffff;
 
   /* Background colors */
   --color-background-primary: #ffffff;
@@ -38,11 +30,9 @@
   --color-background-tertiary: #d3e3ec;
   --color-background-fourth: #dcf2ea;
 
-  /* Font family */
-  --font-montserrat: "Montserrat", sans-serif;
-
   /* Border */
   --color-border-primary: #2374a14d;
+  --color-border-secondary: #2374a1;
 
   /* Separator */
   --color-separator-primary: #d9d9d9;
@@ -51,19 +41,46 @@
 /* Dark theme variables override when [data-theme="dark"] is present */
 
 [data-theme="dark"] {
+  /* Button colors */
+  --color-button-primary: #aee2ff;
+  --color-button-hover: #1c5d81;
+  --color-button-disable: #7bacc7;
+  --color-button-active: #0e3f54;
+  --color-button-inactive: #eceff5;
+  --color-button-secondary: #aee2ff;
+  --color-button-tag: #aee2ff;
+
+  /* Text colors */
   --color-text-primary: #ffffff;
   --color-text-secondary: #b7b7b7;
+  --color-text-secondary-contrast: #ffffff;
+  --color-text-tag: #aee2ff;
+  --color-button-text-light: #2374a1;
+  --color-text-counter: #ffffff;
+  --color-text-tertiary: #4ebd96;
+
+  /* Icon colors */
+  --color-icon-primary: #ffffff;
+  --color-icon-secondary: #b7b7b7;
+  --color-icon-tag: #2374a1;
+
   /* Background colors */
   --color-background-primary: #001927;
   --color-background-secondary: #002e42;
   --color-background-tertiary: #003c55;
   --color-background-fourth: #00354a;
+
+  /* Border */
+  --color-border-primary: #2374a14d;
+  --color-border-secondary: #aee2ff;
+
+  /* Separator */
+  --color-separator-primary: #d9d9d9;
 }
 
 /* Typography System - Based on UI Style Guide */
 
 body {
-  font-family: var(--font-montserrat);
   background-color: var(--color-background-primary);
   margin: 0;
   padding: 0;
