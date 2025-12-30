@@ -504,10 +504,11 @@ export const ArrowRight = () => {
       viewBox="0 0 15 13"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={"text-inherit"}
     >
       <path
         d="M-2.73203e-07 6.25017C-2.43043e-07 6.94017 0.56 7.50017 1.25 7.50017L10.232 7.50017L7.366 10.3662C7.13155 10.6006 6.99983 10.9186 6.99983 11.2502C6.99983 11.5817 7.13155 11.8997 7.366 12.1342C7.60045 12.3686 7.91844 12.5003 8.25 12.5003C8.58156 12.5003 8.89955 12.3686 9.134 12.1342L14.134 7.13417C14.2501 7.01809 14.3422 6.88028 14.4051 6.7286C14.4679 6.57692 14.5002 6.41435 14.5002 6.25017C14.5002 6.08599 14.4679 5.92342 14.405 5.77174C14.3422 5.62006 14.2501 5.48225 14.134 5.36617L9.134 0.36617C8.89955 0.131718 8.58156 6.30061e-06 8.25 6.3151e-06C7.91844 6.32959e-06 7.60045 0.131718 7.366 0.36617C7.13155 0.600621 6.99983 0.918606 6.99983 1.25017C6.99983 1.58173 7.13155 1.89972 7.366 2.13417L10.232 5.00017L1.25 5.00017C0.56 5.00017 -3.03364e-07 5.56017 -2.73203e-07 6.25017Z"
-        fill="var(--color-icon-tag)"
+        fill="currentColor"
       />
     </svg>
   );
@@ -583,7 +584,7 @@ export const Twitter = () => {
       viewBox="0 0 26 26"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-4 h-4 md:w-6.5 md:h-6.5"
+      className="w-4 h-4 md:w-6.5 md:h-6.5 cursor-pointer"
     >
       <rect
         x="0.6"
@@ -610,7 +611,7 @@ export const Linkedin = () => {
       viewBox="0 0 26 26"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-4 h-4 md:w-6.5 md:h-6.5"
+      className="w-4 h-4 md:w-6.5 md:h-6.5 cursor-pointer"
     >
       <rect
         x="0.6"
@@ -649,7 +650,7 @@ export const Insta = () => {
       viewBox="0 0 26 26"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-4 h-4 md:w-6.5 md:h-6.5"
+      className="w-4 h-4 md:w-6.5 md:h-6.5 cursor-pointer"
     >
       <rect
         x="0.6"
@@ -676,7 +677,7 @@ export const Facebook = () => {
       viewBox="0 0 26 26"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-4 h-4 md:w-6.5 md:h-6.5"
+      className="w-4 h-4 md:w-6.5 md:h-6.5 cursor-pointer"
     >
       <rect
         x="0.6"
@@ -703,7 +704,7 @@ export const Upwork = () => {
       viewBox="0 0 26 26"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-4 h-4 md:w-6.5 md:h-6.5"
+      className="w-4 h-4 md:w-6.5 md:h-6.5 cursor-pointer"
     >
       <rect
         x="0.6"
@@ -730,7 +731,7 @@ export const Dribbble = () => {
       viewBox="0 0 26 26"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-4 h-4 md:w-6.5 md:h-6.5"
+      className="w-4 h-4 md:w-6.5 md:h-6.5 cursor-pointer"
     >
       <rect
         x="0.6"
@@ -789,7 +790,7 @@ export const Behance = () => {
       viewBox="0 0 26 26"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-4 h-4 md:w-6.5 md:h-6.5"
+      className="w-4 h-4 md:w-6.5 md:h-6.5 cursor-pointer"
     >
       <rect
         x="0.6"
@@ -840,6 +841,35 @@ export const ArrowLeft = () => {
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const DownloadPdf = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9 17.75C8.9 17.75 8.81 17.73 8.71 17.69C8.43 17.58 8.25 17.3 8.25 17V11C8.25 10.59 8.59 10.25 9 10.25C9.41 10.25 9.75 10.59 9.75 11V15.19L10.47 14.47C10.76 14.18 11.24 14.18 11.53 14.47C11.82 14.76 11.82 15.24 11.53 15.53L9.53 17.53C9.39 17.67 9.19 17.75 9 17.75Z"
+        fill="var(--color-icon-primary)"
+      />
+      <path
+        d="M9 17.7499C8.81 17.7499 8.62 17.6799 8.47 17.5299L6.47 15.5299C6.18 15.2399 6.18 14.7599 6.47 14.4699C6.76 14.1799 7.24 14.1799 7.53 14.4699L9.53 16.4699C9.82 16.7599 9.82 17.2399 9.53 17.5299C9.38 17.6799 9.19 17.7499 9 17.7499Z"
+        fill="var(--color-icon-primary)"
+      />
+      <path
+        d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H14C14.41 1.25 14.75 1.59 14.75 2C14.75 2.41 14.41 2.75 14 2.75H9C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V10C21.25 9.59 21.59 9.25 22 9.25C22.41 9.25 22.75 9.59 22.75 10V15C22.75 20.43 20.43 22.75 15 22.75Z"
+        fill="var(--color-icon-primary)"
+      />
+      <path
+        d="M22 10.75H18C14.58 10.75 13.25 9.41999 13.25 5.99999V1.99999C13.25 1.69999 13.43 1.41999 13.71 1.30999C13.99 1.18999 14.31 1.25999 14.53 1.46999L22.53 9.46999C22.74 9.67999 22.81 10.01 22.69 10.29C22.57 10.57 22.3 10.75 22 10.75ZM14.75 3.80999V5.99999C14.75 8.57999 15.42 9.24999 18 9.24999H20.19L14.75 3.80999Z"
+        fill="var(--color-icon-primary)"
       />
     </svg>
   );

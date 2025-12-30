@@ -24,7 +24,7 @@ const PortfolioProjects = () => {
       : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <section className="xl:py-24 py-15 md:py-20 px-6 container lg:px-30">
+    <section id="projects-section" className="xl:py-24 py-15 md:py-20 px-6 container lg:px-30">
       <h1 className="font-bold text-center text-[1.875rem] md:text-[3.25rem] lg:text-[3.625rem] xl:text-[4.375rem] text-text-primary mb-7.5 sm:mb-10">
         PROJECTS
       </h1>

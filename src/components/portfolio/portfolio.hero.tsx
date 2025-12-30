@@ -9,20 +9,29 @@ const PortfolioHero = () => {
     <section className="my-dashed-border">
       <div className="container md:py-20 xl:py-24  md:px-10 lg:px-10.5 xl:px-30 flex items-center md:gap-10 lg:gap-10.5 xl:gap-24">
         <Image
-          src={"/images/portfolio/portfolio.hero.line.svg"}
+          src="/images/portfolio/portfolio.hero.line.svg"
           alt="Hero section line"
           width={17}
           height={716}
           priority
-          className="hidden h-full md:block"
+          className="hidden md:block in-data-[theme='dark']:md:hidden"
+        />
+
+        <Image
+          src="/images/portfolio/portfolio.hero.line.dark.svg"
+          alt="Hero section line (dark mode)"
+          width={17}
+          height={716}
+          priority
+          className="hidden in-data-[theme='dark']:md:block"
         />
         <div>
           <div className="flex px-10 md:px-0 flex-col-reverse md:flex-row md:gap-10.25 xl:gap-19  justify-between items-center">
             <div>
-              <h1 className="text-[4.375rem] lg:text-[6.25rem] mt-14.5 md:mt-0 text-center md:text-left md:text-[5rem] font-bold text-text-primary">
+              <h1 className="text-[4.375rem] lg:text-[6.25rem] mt-14.5 md:mt-0 text-center md:text-left md:text-[5rem] leading-normal font-bold text-text-primary">
                 {hero.title}
               </h1>
-              <p className="mt-3 text-center md:text-left font-medium text-sm md:text-xl leading-7 md:max-w-122 xl:max-w-[34.813rem] text-text-secondary pl-2">
+              <p className="mt-3 text-center  md:text-left font-medium text-sm md:text-xl leading-7.5 md:max-w-122 xl:max-w-[34.813rem] text-text-secondary pl-2">
                 {hero.description}
               </p>
               <Image

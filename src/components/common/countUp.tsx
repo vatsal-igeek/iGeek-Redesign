@@ -132,16 +132,14 @@ export default function CountUp({
   return (
     <div className="countup-wrapper flex items-center gap-4">
       <div className="flex flex-col">
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center ">
           <span className={className} ref={ref} />
           {icon && (
             <div className="flex items-center justify-center">{icon}</div>
           )}
         </div>
         {title && (
-          <div className={`whitespace-nowrap ${titleClassName ?? ""}`}>
-            {title}
-          </div>
+          <p className={`whitespace-nowrap ${titleClassName ?? ""}`}>{title}</p>
         )}
       </div>
     </div>

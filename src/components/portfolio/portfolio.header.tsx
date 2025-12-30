@@ -43,9 +43,9 @@ export default function PortfolioHeader() {
           <Button
             variant="tag"
             size="lg"
-            className="cursor-pointer  font-semibold"
+            className="cursor-pointer  font-semibold hover:text-white"
           >
-            Book a call <ArrowRight />
+            Book a Call <ArrowRight />
           </Button>
           <SvgBackground
             icon={isDark ? <SunSvg /> : <MoonSvg />}

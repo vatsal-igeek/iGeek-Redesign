@@ -17,16 +17,15 @@ const ProjectDetail = () => {
   return (
     <section className="my-dashed-border">
       <div className="container px-6 py-15 md:px-10 lg:px-10.5 md:py-20 xl:py-25 xl:px-30">
-        <div
-          className="flex items-center gap-2 mb-10 cursor-pointer"
-          onClick={() => router.push("/portfolio")}
-        >
-          <ArrowLeft />
+        <div className="flex items-center gap-2 mb-10 cursor-pointer">
+          <div onClick={() => router.push("/portfolio")}>
+            <ArrowLeft />
+          </div>
           <p className="text-text-secondary text-xl font-medium">
             Back to projects
           </p>
         </div>
-        <h1 className="xl:text-[3.75rem] text-[1.75rem] md:text-[2.813rem] lg:text-[3.125rem] font-medium text-text-primary">
+        <h1 className="xl:text-[3.75rem] text-[1.75rem] md:text-[2.813rem] lg:text-[3.125rem] leading-normal font-medium text-text-primary">
           {project.name}
         </h1>
         <Image

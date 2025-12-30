@@ -52,7 +52,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           variant === "toggle" &&
             (isActive
               ? "bg-(--color-button-active) text-white"
-              : "bg-button-inactive text-text-secondary hover:bg-background-tertiary"),
+              : "bg-button-inactive text-text-secondary hover:bg-background-tertiary dark:hover:text-white!"),
 
           // Sizes
           {
