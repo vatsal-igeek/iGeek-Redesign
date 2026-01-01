@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import { useInView } from "motion/react";
 import Image from "next/image";
 import CountUp from "../common/countUp";
 import portfolioData from "../../data/portfolio.json";
@@ -5,8 +7,20 @@ import portfolioData from "../../data/portfolio.json";
 const { hero } = portfolioData;
 
 const PortfolioHero = () => {
+  const statsRef = useRef<HTMLDivElement>(null);
+  const statsInView = useInView(statsRef, { once: true, margin: "-10% 0px" });
+
   return (
-    <section className="my-dashed-border">
+    <section
+      className="
+    my-dashed-border
+    bg-no-repeat
+    bg-right
+    bg-contain
+    md:bg-[url('/images/portfolio/portfolio.hero.bg.svg')]
+    md:in-data-[theme='dark']:bg-[url('/images/portfolio/portfolio.hero.bg.dark.svg')]
+  "
+    >
       <div className="container md:py-20 xl:py-24  md:px-10 lg:px-10.5 xl:px-30 flex items-center md:gap-10 lg:gap-10.5 xl:gap-24">
         <Image
           src="/images/portfolio/portfolio.hero.line.svg"
@@ -26,7 +40,7 @@ const PortfolioHero = () => {
           className="hidden in-data-[theme='dark']:md:block"
         />
         <div>
-          <div className="flex px-10 md:px-0 flex-col-reverse md:flex-row md:gap-10.25 xl:gap-19  justify-between items-center">
+          <div className="flex px-10 md:px-0 flex-col-reverse md:flex-row md:gap-10.25 xl:gap-19  justify-between items-center  bg-[url('/images/portfolio/mobile/portfolio.hero.bg.svg')] bg-no-repeat bg-right bg-contain in-data-[theme='dark']:bg-[url('/images/portfolio/mobile/portfolio.hero.bg.dark.svg')]">
             <div>
               <h1 className="text-[4.375rem] lg:text-[6.25rem] mt-14.5 md:mt-0 text-center md:text-left md:text-[5rem] leading-normal font-bold text-text-primary">
                 {hero.title}
@@ -43,7 +57,7 @@ const PortfolioHero = () => {
                 className="w-full mt-6 h-auto block md:hidden"
               />
             </div>
-            <div className="mt-15  xl:aspect-5/5">
+            <div className="mt-15  xl:aspect-5/5 ">
               <Image
                 src={"/images/portfolio/portfolio.hero.svg"}
                 alt="Hero section"
@@ -55,12 +69,16 @@ const PortfolioHero = () => {
             </div>
           </div>
 
-          <div className="flex my-dashed-border-top md:border-t-0! pt-15 mb-15 md:mb-0 flex-col md:flex-row  items-center w-full justify-between mt-15 md:mt-12.75  xl:mt-15">
+          <div
+            ref={statsRef}
+            className="flex my-dashed-border-top md:border-t-0! pt-15 mb-15 md:mb-0 flex-col md:flex-row  items-center w-full justify-between mt-15 md:mt-12.75  xl:mt-15"
+          >
             <div className="flex justify-center min-h-22 min-w-32">
               <CountUp
                 from={0}
                 to={hero.stats[0].value}
                 duration={1}
+                startWhen={statsInView}
                 className="text-[3.75rem] md:text-[3.125rem] lg:text-[3.75rem]  xl:text-7xl text-text-counter font-bold"
                 title={hero.stats[0].label}
                 icon={
@@ -81,6 +99,7 @@ const PortfolioHero = () => {
                 from={0}
                 to={hero.stats[1].value}
                 duration={1}
+                startWhen={statsInView}
                 className="text-[3.75rem] md:text-[3.125rem]  lg:text-[3.75rem] xl:text-7xl text-text-counter font-bold"
                 title={hero.stats[1].label}
                 icon={
@@ -101,6 +120,7 @@ const PortfolioHero = () => {
                 from={0}
                 to={hero.stats[2].value}
                 duration={1}
+                startWhen={statsInView}
                 className="text-[3.75rem] md:text-[3.125rem] lg:text-[3.75rem] xl:text-7xl text-text-counter font-bold"
                 title={hero.stats[2].label}
                 icon={
@@ -121,6 +141,7 @@ const PortfolioHero = () => {
                 from={0}
                 to={hero.stats[3].value}
                 duration={1}
+                startWhen={statsInView}
                 className="text-[3.75rem] md:text-[3.125rem] lg:text-[3.75rem] xl:text-7xl text-center text-text-counter font-bold"
                 title={hero.stats[3].label}
                 icon={

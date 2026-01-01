@@ -1,13 +1,8 @@
-import {
-  IgeekDarkLogoSvg,
-  IgeekLightLogoSvg,
-  MenuListSvg,
-  MoonSvg,
-  SunSvg,
-} from "@/icons";
+import { MenuListSvg, MoonSvg, SunSvg } from "@/icons";
 import { useTheme } from "next-themes";
 import SvgBackground from "./common/svg-background";
 import { useEffect, useState } from "react";
+import IGeekLogo from "./common/igeek.logo";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -34,9 +29,7 @@ export default function Header() {
           />
         }
       />
-      <span className="cursor-pointer">
-        {isDark ? <IgeekDarkLogoSvg /> : <IgeekLightLogoSvg />}
-      </span>
+      <IGeekLogo />
       <SvgBackground
         icon={isDark ? <SunSvg /> : <MoonSvg />}
         onClick={toggleTheme}
